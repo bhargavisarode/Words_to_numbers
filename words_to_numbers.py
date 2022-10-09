@@ -120,11 +120,11 @@ def four_word_nums(line_words):
         #146, 624, 999...
         if line_words[1] == 'hundred':
             print_number.append(str(word_numbers_dict[line_words[0]])[0] + str(word_numbers_dict[line_words[2]])[0] + str(word_numbers_dict[line_words[3]])) 
-        if line_words[1] == 'thousand':
+        elif line_words[1] == 'thousand':
             print_number.append(str(word_numbers_dict[line_words[0]])[0]+'0'+ str(word_numbers_dict[line_words[2]])[0] + str(word_numbers_dict[line_words[3]]))
-        if line_words[1] == 'million':
+        elif line_words[1] == 'million':
             print_number.append(str(word_numbers_dict[line_words[0]])[0]+'0000'+ str(word_numbers_dict[line_words[2]])[0] + str(word_numbers_dict[line_words[3]]))
-        if line_words[1] == 'billion':
+        elif line_words[1] == 'billion':
             print_number.append(str(word_numbers_dict[line_words[0]])[0]+'0000000'+ str(word_numbers_dict[line_words[2]])[0] + str(word_numbers_dict[line_words[3]]))    
 for line in lines:
     # list containing the string for each digit of the final number that will be printed
